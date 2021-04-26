@@ -1,0 +1,9 @@
+.search {
+  &--mobile {
+    @apply transform -translate-y-full transition-all duration-1000;
+
+    &.active {
+      @apply transform translate-y-0;
+    }
+  }
+}

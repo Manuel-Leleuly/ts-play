@@ -1,0 +1,18 @@
+.navbar {
+  #search {
+    @apply visible;
+  }
+
+  .active {
+    &#search {
+      @apply invisible;
+    }
+  }
+
+  img {
+    @apply max-w-brand-logo;
+  }
+
+  &--desktop {
+  }
+}

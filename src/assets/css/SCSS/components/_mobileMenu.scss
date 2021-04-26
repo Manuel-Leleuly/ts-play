@@ -1,0 +1,33 @@
+.menu {
+  &--mobile {
+    @apply transform -translate-y-full transition-all duration-1000;
+
+    &.active {
+      @apply transform translate-y-0;
+    }
+  }
+
+  &--content {
+    @apply dark:text-white text-accel-header-dark;
+
+    ul {
+      li {
+        &:nth-of-type(2) {
+          @apply border-b border-solid border-accel-footer-dark dark:border-accel-divider-dark;
+        }
+
+        ul {
+          .divider {
+            @apply border-b border-solid border-accel-footer-dark dark:border-accel-sub-divider-dark;
+          }
+
+          li {
+            &:nth-of-type(2) {
+              @apply border-none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

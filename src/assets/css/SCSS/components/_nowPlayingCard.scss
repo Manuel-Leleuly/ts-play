@@ -1,0 +1,17 @@
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+
+  &.line-clamp-1 {
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+  }
+
+  &.line-clamp-4 {
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+  }
+}

@@ -1,0 +1,30 @@
+.movie {
+  &--card {
+    @apply transition-all duration-300;
+
+    &::before {
+      @apply absolute top-0 bottom-0 left-0 right-0 opacity-0;
+      @apply transition-all duration-300 bg-black;
+      content: "";
+    }
+
+    &:hover {
+      &::before {
+        @apply opacity-60;
+      }
+
+      & > div {
+        @apply opacity-100;
+      }
+    }
+
+    div {
+      @apply opacity-0;
+      @apply transition-all duration-300;
+
+      div {
+        @apply opacity-100;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./global/fonts";
+@import "./global/variables";
+@import "./global/buttons";
+@import "./global/mixins";
+@import "./components/header";
+@import "./components/mobileMenu";
+@import "./components/toggleTheme";
+@import "./components/burger";
+@import "./components/searchMobile";
+@import "./components/carousel";
+@import "./components/main/allMovieCard";
+@import "./components/nowPlayingCard";
+@import "./components//MovieDetail/videoModal";
+@import "./components/MovieDetail/trailer";
+
+* {
+  font-family: "Roboto", sans-serif;
+}

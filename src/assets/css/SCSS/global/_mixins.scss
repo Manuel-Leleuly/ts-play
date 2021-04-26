@@ -1,0 +1,29 @@
+@mixin backgroundFilter {
+  &::before {
+    @apply absolute top-0 bottom-0 left-0 right-0 opacity-70;
+    content: "";
+    background: linear-gradient(
+      257.92deg,
+      rgba(35, 40, 49, 0) 8.71%,
+      rgba(35, 40, 49, 0.62) 33.77%,
+      #232831 55.77%,
+      #232831 95.34%
+    );
+  }
+}
+
+@mixin trailerBackgroundFilter {
+  &::before {
+    @apply absolute top-0 bottom-0 left-0 right-0 z-10 opacity-70;
+    content: "";
+    background: linear-gradient(
+      180deg,
+      rgba(35, 40, 49, 0) 0%,
+      rgba(35, 40, 49, 0.201479) 0.01%,
+      rgba(35, 40, 49, 0.331459) 47.63%,
+      rgba(35, 40, 49, 0.62) 72.71%,
+      #232831 106.94%,
+      #232831 106.94%
+    );
+  }
+}

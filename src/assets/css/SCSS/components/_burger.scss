@@ -1,0 +1,32 @@
+.burger {
+  div {
+    @apply border-solid border-b-2 border-white;
+    @apply mb-1 w-4;
+    @apply duration-500;
+  }
+
+  &:focus {
+    @apply bg-none border-transparent;
+  }
+
+  &.active {
+    div {
+      transition: 0.5s;
+      &:first-of-type {
+        @apply transform rotate-45;
+        transform-origin: 1px 1px;
+        width: 17px;
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &:last-of-type {
+        @apply transform -rotate-45;
+        transform-origin: -1px 1px;
+        width: 17px;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@keyframes carouselBackground {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+@keyframes widthChange {
+  from {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  to {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}
+
+.poster {
+  @include backgroundFilter;
+
+  &.carousel {
+    animation-name: carouselBackground;
+    animation-duration: 2s;
+  }
+}
+
+.bar {
+  &::before {
+    content: "";
+    @apply absolute top-0 bottom-0 left-0 right-0 w-full;
+    @apply bg-accel-carousel-active;
+    animation-name: widthChange;
+    animation-duration: 14s;
+  }
+}

@@ -1,0 +1,31 @@
+.toggle {
+  input {
+    &:checked {
+      & + .toggle-slide {
+        @apply bg-accel-toggle-dark-slider;
+
+        &::before {
+          @apply bg-accel-toggle-dark-bar;
+          @apply transform translate-x-6;
+        }
+      }
+    }
+  }
+}
+
+.toggle-slide {
+  @apply bg-accel-toggle-light-slider;
+  @apply transform -translate-y-1/2 -translate-x-1/2;
+
+  &.round {
+    &::before {
+      @apply rounded-full;
+    }
+  }
+
+  &::before {
+    @apply -top-1 absolute h-5 w-5 -left-1.5 bottom-1 duration-300;
+    content: "";
+    background-color: $color_toggle_light_bar;
+  }
+}

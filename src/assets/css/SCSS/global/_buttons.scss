@@ -1,0 +1,83 @@
+@mixin btn-color(
+  $background,
+  $text,
+  $text-hover,
+  $border,
+  $border-hover,
+  $border-pressed,
+  $background-hover,
+  $background-pressed
+) {
+  background: theme("backgroundColor." + $background);
+  color: theme("textColor." + $text);
+  border-color: theme("borderColor." + $border);
+
+  &:hover {
+    background: theme("backgroundColor." + $background-hover);
+    color: theme("textColor." + $text-hover);
+    border-color: theme("borderColor." + $border-hover);
+  }
+
+  &:target {
+    background: theme("backgroundColor." + $background-pressed);
+    color: theme("textColor." + $text-hover);
+    border-color: theme("borderColor." + $border-pressed);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+  }
+}
+
+@mixin btn-hover($background) {
+  &:hover {
+    background: theme("backgroundColor." + $background);
+  }
+}
+
+.btn {
+  @apply border transition-all duration-300 focus:outline-none rounded;
+
+  &--blue {
+    @include btn-color(
+      "accel-blue",
+      "white",
+      "white",
+      "transparent",
+      "transparent",
+      "transparent",
+      "accel-blue-hover",
+      "accel-blue-pressed"
+    );
+  }
+
+  &--secondary {
+    @include btn-color(
+      "accel-secondary",
+      "white",
+      "white",
+      "transparent",
+      "transparent",
+      "transparent",
+      "accel-secondary-hover",
+      "accel-secondary-pressed"
+    );
+  }
+
+  &--outline {
+    @include btn-color(
+      "transparent",
+      "white",
+      "black",
+      "white",
+      "white",
+      "accel-divider-dark",
+      "white",
+      "accel-divider-dark"
+    );
+  }
+
+  &--favorite {
+    @apply w-15 h-15;
+  }
+}
